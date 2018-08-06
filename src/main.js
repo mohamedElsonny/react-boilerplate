@@ -9,5 +9,5 @@ require('webpack-hot-middleware/client?reload=true');
 // make es6 working
 require('babel-register');
 require('./index.html');
-require('./main.scss');
+require('./scss/main.scss');
 require('./index');

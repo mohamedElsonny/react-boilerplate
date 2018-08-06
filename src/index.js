@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
+import {
+  AppContainer
+} from 'react-hot-loader';
 
-import App from './app';
+import App from './components/App';
 
 function render(Component) {
-  ReactDOM.render(
+  ReactDOM.render( 
     <AppContainer>
-      <Component />
+      <Component/>
     </AppContainer>,
     document.getElementById('react-root')
   );
@@ -16,8 +18,8 @@ function render(Component) {
 render(App);
 
 if (module.hot) {
-  module.hot.accept('./app', () => {
-    const NewApp = require('./app').default;
+  module.hot.accept('./components/App', () => {
+    const NewApp = require('./components/App').default;
     render(NewApp);
   });
 }
